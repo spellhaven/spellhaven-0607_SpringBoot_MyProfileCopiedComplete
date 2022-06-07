@@ -37,11 +37,11 @@
 		INSERT INTO q_board(qnum, qid, qname, qcontent, qemail) VALUES (q_board_seq.nextval,#{param1},#{param2},#{param3},#{param4})
 	</insert>
 	
-	<select id="listDao" resultType="com.gyojincompany.profileWeb.dto.BoardDto">
+	<select id="listDao" resultType="com.spellhaven.profileHome.dto.BoardDto">
 		SELECT * FROM q_board ORDER BY qnum DESC	
 	</select>
 	
-	<select id="viewDao" resultType="com.gyojincompany.profileWeb.dto.BoardDto">
+	<select id="viewDao" resultType="com.spellhaven.profileHome.dto.BoardDto">
 		SELECT * FROM q_board WHERE qnum = #{param1}
 	</select>
 	

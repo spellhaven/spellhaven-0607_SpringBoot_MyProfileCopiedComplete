@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css">
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/board.js"></script>
-<title>## Leegyojin Profile Web</title>
+<title>깜찍한 웹 질문게시판🙂</title>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>

@@ -8,7 +8,7 @@
 <link rel = "stylesheet" href = "${pageContext.request.contextPath }/resources/css/content.css">
 <link rel = "stylesheet" href = "${pageContext.request.contextPath }/resources/css/member.css">
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/board.js"></script>
-<title>깜찍한 웹 질문게시판🙂</title>
+<title>깜찍한 웹 질문게시판 질문작성🙂</title>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
@@ -29,45 +29,42 @@
 						<form action = "write" method = "post" name = "question_form">
 							<tr>
 								<td>
-									<span class = "text01">ID :</span>
+									<span class="text01">ID : </span> 
 								</td>
 								<td>
-									<input class = "type01" type = "text" name = "qid">
+									<input class="type01" type="text" name="qid" value="<% if(session.getAttribute("id") != null) { out.print(session.getAttribute("id")); } else { out.print("GUEST");} %>" readonly>
 								</td>
-							</tr>
-							</tr>
+							</tr>							
 							<tr>
 								<td>
-									<span class = "text01">NAME :</span>
+									<span class="text01">NAME : </span> 
 								</td>
 								<td>
-									<input class = "type01" type = "text" name = "qname">
-								</td>
-							</tr>
-							<tr>
-							<tr>
-								<td>
-									<span class = "text01">QUESTION :</span>
-								</td>
-								<td>
-									<!-- textarea에 input class가 먹을까? 일단 함 해 보자, ㅋ. -->
-									<textarea id = "textarea01" rows = "5" cols = "25" name = "qcontent"></textarea>
+									<input class="type01" type="text" name="qname" value="<% if(session.getAttribute("name") != null) { out.print(session.getAttribute("name")); } else { out.print("");} %>">
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<span class = "text01">E-MAIL :</span>
+									<span class="text01">QUESTION : </span> 
 								</td>
 								<td>
-									<input class = "type01" type = "text" name = "email">
+									<textarea id="textarea01" rows="5" cols="25" name="qcontent"></textarea>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<span class="text01">E-MAIL : </span> 
+								</td>
+								<td>
+									<input class="type01" type="text" name="qemail">
 								</td>
 							</tr>
 							<tr>
-								<td colspan = "2">
-									<input class = "button01" type = "button" value = "질문쓰기" onclick = "boardConfirm()"> &nbsp;&nbsp;&nbsp;
-									<input class = "button01" type = "button" value = "질문목록" onclick = "location.href='list'">
+								<td colspan="2">
+									<input class="button01" type="button" value="글쓰기" onclick="boardConfirm()">&nbsp;&nbsp;
+									<input class="button01" type="button" value="글목록" onclick="location.href='list'">
 								</td>
-								
 							</tr>
 						</form>
 						</table>
