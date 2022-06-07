@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+	margin : 0;
+	padding : 0;
+}
+
+
+td.menu01 {
+	font-size : 16px;
+	color: #eeeeee;
+	font-family: Arial;
+	text-align: center;
+}
+
+td.menu02 {
+	font-size : 16px;
+	color: #dddddd;
+	font-family: 한컴 말랑말랑;
+	text-align: center;
+	height: 30px;
+}

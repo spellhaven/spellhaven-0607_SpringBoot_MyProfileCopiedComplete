@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- MyBatis를 이용한 DB연결! -->
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0/EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	
+<!-- 만들어 놨던 IDao 인터페이스 위치를 정확히 써 주면 돼 크킄 -->	
+<mapper namespace = "com.spellhaven.profileHome.dao.IDao"> 
+
+	<!-- 이 안에 쓰는 SQL문은 ;로 끝내지 않는다. -->
+
+	<!-- member SQL -->
+	<insert id="joinDao">
+		INSERT INTO q_member (mid, mpw, mname, memail) VALUES (#{param1}, #{param2}, #{param3}, #{param4})
+	</insert>
+
+	<select id = "checkIdDao" resultType = "int">
+		SELECT COUNT(*) FROM q_member WHERE mid = #{param1}
+	</select>
+	
+	<select id = "checkPwDao" resultType = "int">
+		SELECT COUNT(*) FROM q_member WHERE mid = #{param1} AND mpw = #{param2}
+	</select>
+	
+	<select id = "loginInfoDao" resultType = "com.spellhaven.profileHome.dto.MemberDto">
+		SELECT * FROM q_member WHERE mid = #{param1}
+	</select>
+	
+	<update id = "infoModify">
+		UPDATE q_member SET mpw = #{param1}, mname = #{param2}, memail = #{param3} WHERE mid = #{param4}
+	</update>
+
+	<!-- board SQL 6월 7일-->
+	<insert id="writeDao">
+		INSERT INTO q_board(qnum, qid, qname, qcontent, qemail) VALUES (q_board_seq.nextval,#{param1},#{param2},#{param3},#{param4})
+	</insert>
+	
+	<select id="listDao" resultType="com.gyojincompany.profileWeb.dto.BoardDto">
+		SELECT * FROM q_board ORDER BY qnum DESC	
+	</select>
+	
+	<select id="viewDao" resultType="com.gyojincompany.profileWeb.dto.BoardDto">
+		SELECT * FROM q_board WHERE qnum = #{param1}
+	</select>
+	
+	<update id="boardModify">
+		UPDATE q_board SET qname=#{param1}, qcontent=#{param2}, qemail=#{param3} WHERE qnum=#{param4}
+	</update>
+	
+	<delete id="deleteDao">
+		DELETE FROM q_board WHERE qnum = #{param1}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

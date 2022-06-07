@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+td.board01 {
+	
+	font-size: 20px;
+	color: #ffffff;
+	font-family: malgun;
+	font-weight: bold;
+	border-style: solid;
+	border-color: #ffffff;
+	background-color: #525252;
+	text-align: center;
+	border-width: 1px;
+}
+
+td.board02 {
+	
+	font-size: 18px;
+	color: #252525;
+	font-family: malgun;
+	font-weight: normal;
+	border-style: solid;
+	border-color: #ffffff;
+	background-color: #e2e2e2;
+	text-align: center;
+	border-width: 1px;
+}
+
+td.board03 {
+	
+	font-size: 18px;
+	color: #252525;
+	font-family: malgun;
+	font-weight: normal;
+	border-style: solid;
+	border-color: #ffffff;
+	background-color: #e2e2e2;
+	text-align: left;
+	border-width: 1px;
+}

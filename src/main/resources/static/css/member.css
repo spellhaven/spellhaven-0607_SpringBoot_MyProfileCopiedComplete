@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* CSS 하면서 점점 미쳐가는 깜찍이, 톤그로의 영역에 손을 대는데...! */
+
+/* 솔직히 내가 생각해도 login.jsp에서 이 css 문서로 통하는 줄은 아예 지워 버려야 한다고 생각한다.
+그래야 더 디자인적으로 좋지 않을까 싶다. */
+
+span.text01 {
+	
+	font-size : 20px;
+	font-family : 궁서체;
+	color : white;
+	
+	text-shadow: 2px 2px 5px #8080c0;
+	
+}
+
+input.type01 {
+	
+	border: 1px solid RoyalBlue;
+	background-color : LightPink;
+	width: 220px;
+	padding: 5px;
+	font-family: 휴먼아미체;
+	font-size: 12px;
+	
+}
+
+/* 픽셀이라고 계속 반복 안 하고 그냥 숫자만 써도 괸찬았었던 걸로 기억 */
+input.button01 {
+	
+	border: 2px solid Aqua;
+	background-color: Aquamarine;
+	width: 180;
+	height: 40;
+	padding: 5;
+	font-size : 15px;
+	font-weight: bold;
+	color: Fuchsia;
+	font-family: 맑은 고딕;
+	
+}
+
+#textarea01 {
+	
+	border: 1px solid RoyalBlue;
+	background-color : LightPink;
+	width: 220px;
+	padding: 5px;
+	font-family: 휴먼아미체;
+	font-size: 12px;
+	
+}
+
+
+
+
+
+
+
+
+
+
