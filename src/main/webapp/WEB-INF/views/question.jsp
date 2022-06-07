@@ -26,7 +26,7 @@
 					<td bgcolor = "#d5d5d5" align = "center" height = "500">
 					
 						<table border = "0" cellspacing = "0" cellpadding = "10"> 
-						<form action = "write" method = "post" name = "question_form">
+						<form action = "write" method = "post" name = "question_frm">
 							<tr>
 								<td>
 									<span class="text01">ID : </span> 
