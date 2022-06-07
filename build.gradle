@@ -21,9 +21,14 @@ dependencies {
 	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
-	//JSTL이랑 내장톰캣 쓸 수 있게 해 주는 놈들.
+	// JSTL이랑 내장톰캣 쓸 수 있게 해 주는 놈들.
 	implementation 'javax.servlet:jstl' 
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	
+	// 웹 DB 관련 디펜던시들.
+	implementation 'com.oracle.database.security:oraclepki'
+    implementation 'com.oracle.database.security:osdt_core'
+    implementation 'com.oracle.database.security:osdt_cert'
 }
 
 tasks.named('test') {
